@@ -1,5 +1,7 @@
 # BikeApp
 
+Pet-project. An app that displays lists of bike rental networks and stations within them, with the ability to add stations to favorites.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
 
 ## Development server
