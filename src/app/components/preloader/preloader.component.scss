@@ -1,0 +1,51 @@
+@import '../../../styles';
+
+.preloader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.preloader {
+  display: inline-block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: spin 1.1s infinite ease;
+  transform: translateZ(0);
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em $light-green, 1.8em -1.8em 0 0em rgba(25, 193, 81, 36.3%), 2.5em 0em 0 0em rgba(19, 202, 80, 20%), 1.75em 1.75em 0 0em rgba(137, 146, 140, 20%), 0em 2.5em 0 0em rgba(137, 146, 140, 20%), -1.8em 1.8em 0 0em rgba(137, 146, 140, 20%), -2.6em 0em 0 0em rgba(25, 193, 82, 50%), -1.8em -1.8em 0 0em rgba(25, 193, 82, 70%);
+  }
+
+  12.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(25, 193, 82, 70%), 1.8em -1.8em 0 0em $light-green, 2.5em 0em 0 0em rgba(137, 146, 140, 0.2), 1.75em 1.75em 0 0em rgba(137, 146, 140, 0.2), 0em 2.5em 0 0em rgba(137, 146, 140, 0.2), -1.8em 1.8em 0 0em rgba(137, 146, 140, 0.2), -2.6em 0em 0 0em rgba(137, 146, 140, 0.2), -1.8em -1.8em 0 0em rgba(25, 193, 82, 0.5);
+    }
+
+    25%
+{      box-shadow: 0em -2.6em 0em 0em rgba(25, 193, 82, 50%), 1.8em -1.8em 0 0em rgba(25, 193, 82, 0.7), 2.5em 0em 0 0em $light-green, 1.75em 1.75em 0 0em rgba(137, 146, 140, 0.2), 0em 2.5em 0 0em rgba(137, 146, 140, 0.2), -1.8em 1.8em 0 0em rgba(137, 146, 140, 0.2), -2.6em 0em 0 0em rgba(137, 146, 140, 0.2), -1.8em -1.8em 0 0em rgba(137, 146, 140, 0.2);}
+
+    37.5%
+{      box-shadow: 0em -2.6em 0em 0em rgba(137, 146, 140, 0.5), 1.8em -1.8em 0 0em rgba(25, 193, 82, 0.5), 2.5em 0em 0 0em rgba(25, 193, 82, 0.7), 1.75em 1.75em 0 0em $light-green, 0em 2.5em 0 0em rgba(137, 146, 140, 0.5), -1.8em 1.8em 0 0em rgba(137, 146, 140, 0.5), -2.6em 0em 0 0em rgba(137, 146, 140, 0.5), -1.8em -1.8em 0 0em rgba(137, 146, 140, 0.5);}
+
+    50%
+      {box-shadow: 0em -2.6em 0em 0em rgba(137, 146, 140, 0.5), 1.8em -1.8em 0 0em rgba(137, 146, 140, 0.5), 2.5em 0em 0 0em rgba(25, 193, 82, 0.5), 1.75em 1.75em 0 0em rgba(25, 193, 82, 0.7), 0em 2.5em 0 0em $light-green, -1.8em 1.8em 0 0em rgba(137, 146, 140, 0.5), -2.6em 0em 0 0em rgba(137, 146, 140, 0.5), -1.8em -1.8em 0 0em rgba(137, 146, 140, 0.5);}
+
+    62.5%
+      {box-shadow: 0em -2.6em 0em 0em rgba(137, 146, 140, 50%), 1.8em -1.8em 0 0em rgba(137, 146, 140, 0.5), 2.5em 0em 0 0em rgba(137, 146, 140, 0.5), 1.75em 1.75em 0 0em rgba(25, 193, 82, 0.5), 0em 2.5em 0 0em rgba(25, 193, 82, 0.7), -1.8em 1.8em 0 0em $light-green, -2.6em 0em 0 0em rgba(25, 193, 82, 0.5), -1.8em -1.8em 0 0em rgba(25, 193, 82, 0.5);}
+
+    75% {
+      box-shadow: 0em -2.6em 0em 0em rgba(137, 146, 140, 0.5), 1.8em -1.8em 0 0em rgba(137, 146, 140, 0.5), 2.5em 0em 0 0em rgba(137, 146, 140, 0.5), 1.75em 1.75em 0 0em rgba(137, 146, 140, 0.5), 0em 2.5em 0 0em rgba(25, 193, 82, 0.5), -1.8em 1.8em 0 0em rgba(25, 193, 82, 0.7), -2.6em 0em 0 0em $light-green, -1.8em -1.8em 0 0em rgba(137, 146, 140, 0.5);
+    }
+
+    85% {
+      box-shadow: 0em -2.6em 0em 0em rgba(137, 146, 140, 50%), 1.8em -1.8em 0 0em rgba(137, 146, 140, 50%), 2.5em 0em 0 0em rgba(137, 146, 140, 0.5), 1.75em 1.75em 0 0em rgba(137, 146, 140, 0.5), 0em 2.5em 0 0em rgba(137, 146, 140, 0.2), -1.8em 1.8em 0 0em rgba(25, 193, 82, 0.5), -2.6em 0em 0 0em rgba(25, 193, 82, 0.7), -1.8em -1.8em 0 0em $light-green;
+      }
+}

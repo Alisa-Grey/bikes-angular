@@ -1,0 +1,63 @@
+@use "sass:color";
+@import '../../../styles';
+
+.station-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  color: $dark-blue;
+  background-color: #9eccb8;
+}
+
+.station-card-row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+  }
+
+.station-card-heading {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.station-card-text {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.station-card-button {
+  will-change: transform;
+  transition: transform .3s ease-in-out;
+
+  & > .station-card-heart-icon > path {
+    will-change: stroke;
+    transition: stroke 0.2s ease-in-out;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:focus > svg > path {
+    stroke: $dark-blue;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.station-card-heart-icon {
+  width: 16px;
+  height: 16px;
+  stroke: $dark-blue;
+  fill: transparent;
+
+  &.is-favourite {
+    fill: $dark-blue;
+  }
+}

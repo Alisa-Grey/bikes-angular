@@ -1,0 +1,14 @@
+<h2 class="list-container-heading">Networks</h2>
+@if (networks$ | async; as networks) {
+  @if (networks.length) {
+    <ul class="list list-reset">
+      @for (network of networks; track network.id) {
+        <app-network-card [network]="network" />
+      }
+    </ul>
+  } @else {
+    <app-not-found-block text="Networks not found" />
+  }
+} @else {
+  <app-preloader></app-preloader>
+}

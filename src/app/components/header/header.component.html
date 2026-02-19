@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="header-inner-wrap">
+    <h1 class="header-logo">CityBikes</h1>
+    @if (networkDetailsService.currentNetwork().id) {
+      <p class="header-text">Network: {{ networkDetailsService.currentNetwork().name }}</p>
+      <p class="header-text">
+        Stations: {{ networkDetailsService.currentNetwork().stations.length }}
+      </p>
+    }
+  </div>
+  <div class="favourite-data-wrap">
+    <button
+      class="header-button button-reset"
+      aria-label="Show Favouretes"
+      (click)="toggleFavouriteSection()"
+    >
+      <app-heart-icon class="header-heart-icon" />
+    </button>
+    <div class="favourite-data-bubble">
+      <p class="favourite-data-text">{{ favouriteStationsService.storedStations().length }}</p>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,104 @@
+@import '../../../styles';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header-inner-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo {
+  color: $dark-blue;
+}
+
+.header-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+}
+
+.header-heart-icon  {
+  fill: $white;
+  stroke: $white;
+  will-change: stroke, stroke-width;
+  transition: stroke 0.2s ease-in-out;
+}
+
+.header-button:hover {
+  animation: heartbeat 1s infinite;
+}
+
+.header-text {
+  color: $dark-blue;
+  font-weight: 500;
+}
+
+.favourite-data-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.favourite-data-bubble {
+    position: relative;
+    background: $white;
+    color: $dark-blue;
+    font-size: 12px;
+    line-height: 1.1;
+    text-align: center;
+    min-width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.favourite-data-bubble::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 0 0 8px 11px;
+    border-color: transparent transparent $white;
+    top: 35%;
+    left: -7px;
+}
+
+.favourite-data-text {
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.1);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(1.1);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

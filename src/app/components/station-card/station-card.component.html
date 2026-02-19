@@ -1,0 +1,9 @@
+<li id="{{ station.id }}" class="station-card">
+  <div class="station-card-row">
+    <h3 class="station-card-heading">{{ station.name | titlecase }}</h3>
+    <button class="station-card-button button-reset" (click)="toggleItemInFavourites()">
+      <app-heart-icon class="station-card-heart-icon" [class.is-favourite]="isFavourite" />
+    </button>
+  </div>
+  <p class="station-card-text">Availible bikes: {{ station.free_bikes }}</p>
+</li>

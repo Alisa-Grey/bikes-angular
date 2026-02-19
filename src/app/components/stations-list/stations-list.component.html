@@ -1,0 +1,18 @@
+@if (isFavouritesVisible || currentNetwork.id) {
+  <div class="stations-list">
+    <h2 class="list-container-heading">{{ listTitle }}</h2>
+    @if (networkDetailsService.isNetworkbyIdLoading() && !isFavouritesVisible) {
+      <app-preloader></app-preloader>
+    } @else {
+      @if (stations) {
+        <ul class="list list-reset">
+          @for (station of stations; track station.id) {
+            <app-station-card [station]="station" />
+          }
+        </ul>
+      } @else {
+        <app-not-found-block text="Stations not found" />
+      }
+    }
+  </div>
+}

@@ -1,0 +1,10 @@
+<li
+  id="{{ network.id }}"
+  tabIndex="0"
+  class="network-card"
+  [class.is-active]="network.id === networkDetailsService.currentNetwork().id"
+  (click)="handleNetworkClick()"
+>
+  <h3 class="network-card__heading">{{ network.name }}</h3>
+  <p class="network-card__text">{{ network.id }}</p>
+</li>

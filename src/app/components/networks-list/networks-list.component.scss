@@ -1,0 +1,42 @@
+@import '../../../styles';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 0 0 50%;
+  gap: 6px;
+  max-width: calc(50% - 20px);
+  height: calc(100vh - 110px);
+  padding: 20px;
+  border-radius: 14px;
+  background-color: rgba($dark-grey, 0.4);
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 14px;
+    background: $light-green;
+    background-clip: content-box;
+    border: 5px solid transparent;
+  }
+}
+
+.list-container-heading {
+  font-weight: 500;
+  color: $white;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}

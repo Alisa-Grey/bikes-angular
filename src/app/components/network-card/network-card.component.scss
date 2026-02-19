@@ -1,0 +1,41 @@
+@use 'sass:color';
+@import '../../../styles';
+
+.network-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  color: $dark-blue;
+  background-color: rgba($light-green, 0.9);
+  cursor: pointer;
+  will-change: background, box-shadow, transform, outline;
+  transition: background-color 0.2s, box-shadow 0.3s, outline 0.2s ease-in-out;
+
+  &:focus-visible {
+    outline: 2px solid$white;
+  }
+
+  &:hover {
+    background-color: color.adjust(#c2e5c7, $lightness: 10%);
+  }
+
+  &:active {
+    background-color: color.adjust(#c2e5c7, $blackness: 2%);
+  }
+
+  &.is-active {
+    box-shadow: inset -1px -1px 8px 3px $dark-blue;
+  }
+}
+
+.network-card-heading {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.network-card-text {
+  font-size: 14px;
+}
